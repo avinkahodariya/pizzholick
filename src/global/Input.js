@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-const input = (props) => {
+const input = memo((props) => {
   return (
     <>
       <input
@@ -11,9 +11,10 @@ const input = (props) => {
         checked={props.checked}
         className={props.classname}
         onChange={props.onChange}
+        onClick={props.onClick}
       />
     </>
   );
-};
+});
 
 export default input;

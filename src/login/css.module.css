@@ -1,0 +1,50 @@
+.root {
+  border: black;
+  fill: currentColor;
+  width: 2em;
+  height: 100%; /* display: inline-block; */
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  /* user-select: none; */
+  /* margin: 10px auto; */
+  grid-gap: 10px;
+  /* gap: 10px; */
+  border: solid;
+  border-radius: 1em;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.MuiTextField {
+  width: 50%;
+}
+.redborder {
+  border: solid 1em rgb(212, 76, 76);
+  border-color: red;
+}
+.User_info {
+  border: solid grey;
+  border-radius: 3em;
+  width: 30em;
+  height: 30em;
+  margin: auto auto;
+  padding: 10px;
+}
+.Search {
+  border: solid black;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 10px;
+  gap: 10px;
+  justify-content: center;
+  border-radius: 2em;
+  width: 60%;
+}

@@ -8,6 +8,18 @@
 * {
   box-sizing: border-box;
 }
+
+.center {
+  margin: 0 auto;
+  width: 10%;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
 body {
   height: 100vh;
 }
@@ -258,16 +270,21 @@ input[type="checkbox"] {
   display: none;
 }
 
+/* input[id="cb1"]:checked + .border {
+  border: solid 2px rgba(71, 11, 238, 0.959);
+  border-radius: 1px;
+} */
+
 input[type="checkbox"]:checked + .subingreimage {
   border: red solid 3px;
-  border-radius: 1em;
-  display: none;
+
+  /* display: none; */
 }
 
 .PizzaMainImage {
   box-sizing: border-box;
   width: 500px;
-  height: 500px;
+  height: 100%;
   margin: 0 auto;
   position: absolute;
   transform: rotateX(60deg);
@@ -277,7 +294,7 @@ input[type="checkbox"]:checked + .subingreimage {
 }
 .PizzaImageMaking {
   width: 500px;
-  height: 500px;
+  height: 350px;
   margin: 0 auto;
 }
 .pizzarelative {
@@ -308,7 +325,7 @@ p {
 .absolute {
   box-sizing: border-box;
   width: 500px;
-  height: 500px;
+  height: 100%;
   margin: 0 auto;
   position: absolute;
   transform: rotateX(60deg);
@@ -318,7 +335,7 @@ p {
 }
 .imagespan {
   width: 500px;
-  height: 500px;
+  height: 100%;
   animation-name: animation;
   animation-duration: 2s;
 }
@@ -352,4 +369,41 @@ p {
   opacity: 0.95;
   transform: scale(0.87);
   transition: 1.5s;
+}
+
+.subingreimage {
+  border: red solid 3px;
+
+  /* display: none; */
+}
+
+.cartlist {
+  border: solid;
+  padding: 10px;
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.cartinfo {
+  border: solid;
+  overflow: auto;
+  padding: 10px;
+}
+.cartingre {
+  border: solid;
+  padding: 10px;
+}
+.plusminus {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  border-radius: 1em;
 }

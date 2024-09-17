@@ -4,20 +4,20 @@ import styles from "./pizzaedit.module.css";
 import EditPizzaInfo from "./EditPizzaInfo";
 
 const Pizza_Edit_Portion = (props) => {
-  let reciepeArray = props.reciepe;
-  console.log(reciepeArray);
-
   var i = [];
 
   i = props.reciepe.map((e) => {
-    var compo = e;
     return (
       <div className={styles.absolute}>
-        <img src={e[1][0][1]} name={e[0]} className={styles.imagespan} />
+        <img
+          src={e[1][0][1]}
+          name={props.data.name}
+          className={styles.imagespan}
+        />
       </div>
     );
   });
-  console.log(props.ingreinfo);
+
   return (
     <>
       <div className={styles.PizzaImageMaking}>
@@ -25,11 +25,6 @@ const Pizza_Edit_Portion = (props) => {
 
         {i}
       </div>
-      {/* <EditPizzaInfo
-        name={props.name}
-        price={props.price}
-        ingreinfo={props.ingreinfo}
-      /> */}
     </>
   );
 };

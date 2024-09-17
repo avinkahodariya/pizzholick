@@ -10,15 +10,25 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
+import PizzaArray from "./global/PizzaArray";
 
-function App() {
+const App = () => {
+  const localstorage = () => {
+    let pizzastore = JSON.parse(localStorage.getItem("pizzastore"));
+    if (pizzastore == null || pizzastore == undefined) {
+      let pizzastore = [];
+      pizzastore.push(PizzaArray);
+      localStorage.setItem("pizzastore", JSON.stringify(pizzastore));
+    }
+  };
   return (
     <>
+      {localstorage()}
       <Header />
       <Midle />
       <Footer />
     </>
   );
-}
+};
 
 export default App;

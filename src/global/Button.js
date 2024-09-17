@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 
 const Button = (props) => {
   return (
     <>
-      <button onClick={props.handleclick} className={props.classname}>
-        {props.name}{" "}
+      <button onClick={props.Handleclick} className={props.className}>
+        <p>{props.name} </p>
       </button>
     </>
   );

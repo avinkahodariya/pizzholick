@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import style from "../pizza.module.css";
 
-const Footer = () => {
+const Footer = memo(() => {
   return (
     <div className={style.Footer}>
       <div>
@@ -23,6 +23,6 @@ const Footer = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Footer;
