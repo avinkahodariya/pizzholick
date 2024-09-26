@@ -2,10 +2,33 @@
   box-sizing: border-box;
 }
 
+.mainreservation {
+  background-color: #271a1a;
+  border: solid 2px blanchedalmond;
+  /* height: ; */
+}
+
+.hotelbox {
+  background-color: aquamarine;
+  border: solid 2px black;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  font-family: cursive;
+}
+
+.mainhotelbox {
+  display: grid;
+
+  gap: 30px;
+}
 .Header {
   width: 100%;
   height: 90vh;
-  background-image: url("header.jpg");
+  background-image: url("./assets/header.jpg");
   background-size: cover;
   object-fit: contain;
   text-align: center;
@@ -13,11 +36,11 @@
   font-size: 30px;
 }
 
-.info {
-  height: 60%;
-  height: 60%;
+p {
+  /* display: inline-block; */
+  margin-left: 5px;
+  word-wrap: break-word;
 }
-
 .holic,
 .menu {
   text-align: center;
@@ -35,6 +58,7 @@
   font-style: normal;
   font-variant: small-caps;
   margin: 0;
+  height: 3vw;
 }
 
 .navbar .navdiv span {
@@ -60,7 +84,7 @@ body {
 }
 
 .Midle {
-  width: 80%;
+  /* width: 80%; */
 
   display: flex;
   flex-direction: row;
@@ -89,10 +113,12 @@ body {
 }
 
 .box {
-  width: 30%;
+  width: 300px;
   border: solid 2px;
-  justify-content: center;
-  text-align: center;
+  /* justify-content: center;
+  text-align: center; */
+  float: left;
+  margin-left: 5px;
   margin: 10px;
   background-color: rgb(238, 234, 234);
   box-sizing: border-box;
@@ -109,25 +135,21 @@ body {
   transition: 1.5s;
 }
 .img {
-  height: 40vh;
-}
-img {
-  border-radius: 1em;
-
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
+  height: 40%;
 }
 
 .Footer {
-  height: 100%;
-  padding: 50px;
+  height: 7vw;
+  padding: 33px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   border-top: solid 1px black;
   background: #313131;
+  position: relative;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
 }
 
 .Footer div {
@@ -146,20 +168,25 @@ img {
 .name {
   font-family: Apple Chancery, cursive;
   font-weight: bold;
-
+  margin: 0px;
   word-wrap: break-word;
   font-size: larger;
-  float: left;
 }
 .ingredients {
+  height: 5em;
   font-family: Apple Chancery, cursive;
-
+  margin: 0px;
   word-wrap: break-word;
   color: #271a1a;
   width: 100%;
-  height: 30%;
 }
-
+.black {
+  background-color: black;
+  background-color: black;
+}
+.height {
+  height: 6em;
+}
 .ingre {
   width: 100%;
   font-size: large;
@@ -167,21 +194,46 @@ img {
   font-size: 17px;
   font-weight: 300;
   color: rgb(15, 14, 14);
+  margin: 0px;
+  margin-top: 5px;
 }
 .info {
-  display: flex;
   flex-direction: column;
   text-align: left;
-  margin-left: 20px;
+  text-align: center;
 }
 .price {
   font-family: Apple Chancery, cursive;
   font-size: large;
   text-shadow: 0px 5px 10px #4a4a45;
-
+  margin: 0px;
   word-wrap: break-word;
+  height: 1em;
 }
 
+.add {
+  font-family: Apple Chancery, cursive;
+  font-size: large;
+  text-shadow: 0px 5px 10px #4a4a45;
+  word-wrap: break-word;
+  text-align: center;
+  border: solid 2px;
+  border-radius: 1em;
+  /* margin-top: -5px; */
+  width: 93%;
+  padding: 5px;
+  color: aliceblue;
+  background-color: rgb(18, 20, 19);
+  opacity: 0.97;
+  /* margin-left: 10px; */
+}
+
+.add:hover {
+  opacity: 1;
+  transform: scale(0.95);
+  transition: 1.5s;
+}
 .rupi::before {
   content: "\20B9";
+  margin: 0px;
 }

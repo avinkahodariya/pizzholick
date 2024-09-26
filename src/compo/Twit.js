@@ -7,7 +7,7 @@ const Twit = () => {
       <TwitterTimelineEmbed
         sourceType="profile"
         screenName="swiggy_in"
-        options={{ height: 348 }}
+        options={{ height: "650px" }}
       />
     </div>
   );

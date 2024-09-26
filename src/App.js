@@ -1,18 +1,34 @@
 import React from "react";
-import pizza from "./p1.png";
-import Header from "./Header";
-import Midle from "./Midle";
-import Footer from "./Footer";
-import style from "./pizza.module.css";
+import Header from "./compo/Header";
+import Midle from "./compo/Midle";
+import Footer from "./global/Footer";
 
-function App() {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
+import PizzaArray from "./global/PizzaArray";
+
+const App = () => {
+  const localstorage = () => {
+    let pizzastore = JSON.parse(localStorage.getItem("pizzastore"));
+    if (pizzastore == null || pizzastore == undefined) {
+      let pizzastore = [];
+      pizzastore.push(PizzaArray);
+      localStorage.setItem("pizzastore", JSON.stringify(pizzastore));
+    }
+  };
   return (
-    <div>
+    <>
+      {localstorage()}
       <Header />
       <Midle />
       <Footer />
-    </div>
+    </>
   );
-}
+};
 
 export default App;
